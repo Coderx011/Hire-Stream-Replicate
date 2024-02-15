@@ -8,3 +8,25 @@
 body{
     font-family: "Merriweather Sans", sans-serif;
 }
+:root{
+    --primary-color : #3AD8B6;
+    --hover-bgc-main:#80ED99;
+    --hover-bgc-sec:#38A3A5;
+    --bgc-main:linear-gradient(90deg, #38A3A5 0%, #202D87 100%);
+    --bgc-sec:linear-gradient(90deg, rgba(56,163,165,1)  0%, rgba(64,180,243,1) 100%);
+    --bgc-third:linear-gradient(180deg, #38a1a5 0%, #275291 100%);
+    --main-color:#0f1439;
+    --sec-color:#1F2989;
+    --link-color:#4056F4;
+}
+
+/* ================Header================ */
+.main {
+    padding: 0px 42px 0 40px;
+    background: white;
+    position: fixed;
+    inset: 0 0 auto 0;
+}
+nav.navbar .navbar-brand img {
+    width: 206px;
+}
