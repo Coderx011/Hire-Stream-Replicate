@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 *{
@@ -5,8 +6,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1,h2,h3,h4,h5,h6,p,ul,ol ,li{
+    margin: 0;
+    padding: 0;
+}
 body{
     font-family: "Merriweather Sans", sans-serif;
+    color: var(--main-color);
 }
 :root{
     --primary-color : #3AD8B6;
@@ -18,15 +24,402 @@ body{
     --main-color:#0f1439;
     --sec-color:#1F2989;
     --link-color:#4056F4;
+    --main-font: "Merriweather Sans", sans-serif;
+    --heading-font:"Merriweather", sans-serif;
+}
+@media (min-width: 1440px){
+    .container {
+    max-width: 1188px;
 }
 
+}
 /* ================Header================ */
 .main {
     padding: 0px 42px 0 40px;
-    background: white;
+    background: #ffffff;
     position: fixed;
     inset: 0 0 auto 0;
+    z-index: 3;
 }
-nav.navbar .navbar-brand img {
-    width: 206px;
+nav.navbar.navbar-expand-lg.navbar-light {
+    padding-block: 20px;
 }
+nav.navbar .navbar-brand{
+    min-width: 206px;
+}
+nav.navbar .navbar-brand img{
+    width: 206;
+}
+ul.navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 15px !important;
+}
+ul.navbar-nav li {
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 13px;
+    color:var(--main-color);
+    position: relative;
+}
+ul.navbar-nav li a{
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: 300;
+    font-family:"Merriweather Sans", sans-serif ;
+
+}
+ul.navbar-nav li i{
+    font-size: 24px;
+    transition: all 0.4s ease-in-out;
+}
+ul.navbar-nav li:hover i {
+    transform: rotate(180deg);
+}
+ul.navbar-nav li:not(:has(i)):hover a::before {
+    content: " ";
+    position: absolute;
+    height: 5px;
+    background: var(--hover-bgc-main);
+    bottom: 0;
+    left: 0;
+    z-index: 27;
+    animation: animate 0.5s ease forwards;
+}
+@keyframes animate {
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
+}
+.head-btn{
+    margin-left: 30px;
+
+    a {
+        color: var(--main-color);
+        min-width: 104px;
+        box-shadow: 0 2px 10px 0 #4056f42e;
+        min-height: 40px;
+        text-transform: none;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+        font-size: 14px;
+        border-radius: 3px;
+        font-weight: 700;
+    }
+}
+.head-btn a:nth-child(1){
+    background-color: #3AD8B6;
+    transition: all 0.4s ease;
+}
+.head-btn a:nth-child(1):hover{
+    background-color: var(--hover-bgc-sec);
+}
+.head-btn a:nth-child(2){
+    background-color: white;
+    border: 1px solid var(--hover-bgc-main);
+    transition: all 0.4s ease;
+
+}
+.head-btn a:nth-child(2):hover{
+    background-color: var(--hover-bgc-main);
+}
+
+/* ===============banner================== */
+
+.banner-wrapper{
+    position: relative;
+    isolation: isolate;
+    margin-top: 87px;
+    background: var(--bgc-main);
+}
+.banner-wrapper::before{
+    content: "";
+    position: absolute;
+    width: 838px;
+    min-height: 646px;
+    top: 0px;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-size: cover;
+    background-image: url(../Assests/banner-back.svg);
+    background-repeat: no-repeat;
+}
+.banner-text h1 {
+    font-size: 64px;
+    color: white;
+    margin-bottom: 45px;
+    font-weight: 600;
+    font-family: "Merriweather", serif;
+
+}
+.banner-text h6 {
+    margin-bottom: 40px;
+}
+
+.banner-text h6 p {
+    color: white;
+    letter-spacing: -0.5px;
+    font-size: 20px;
+}
+.banner-text>p {
+    color: white;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.45px;
+    font-size: 19px;
+}
+.banner-text .head-btn {
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+.banner-inner {
+    padding-block: 124px;
+}
+.banner-text .head-btn a {
+    min-width: 166px;
+    margin-right: 16px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    font-size: 18px;
+    padding: 8px 22px;
+}
+.recruitment-detail{
+    padding-block: 44px;
+}
+.recruitment-wrapper{
+    padding-top: 50px;
+    padding-bottom: 87px;  
+}
+.recruitment-img-inner{
+    margin: 76px -114px 0px 12px;
+    box-shadow: 1px 1px 11px 4px #ccc;
+    position: relative;
+}
+.recruitment-img-inner img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.recruitment-detail h3 {
+    font-size: 40px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.recruitment-detail p{
+    font-family: Merriweather Sans, sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.45px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: var(--main-color);
+}
+.g-btn a {
+    min-width: 166px;
+    margin-right: 16px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    font-size: 18px;
+    padding: 12px 30px;
+    text-decoration: none;
+    color: var(--main-color);
+    background-color:var(--primary-color);
+    box-shadow: 0 2px 10px 0 #4056f42e;
+    transition: all 0.4s;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.g-btn a:hover{
+    background-color: var(--hover-bgc-sec);
+}
+
+/* ========================about level================ */
+.about-level-wrapper {
+    padding: 22px 0;
+    background: #ECECEC;
+    margin-bottom: 53px;
+}
+.card-wrapper {
+    padding: 39px 0 0;
+    display: flex;
+    align-items: center;
+}
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-img {
+    width: 71px;
+    height: 71px;
+    margin-bottom: 15px;
+    padding: 4px;
+}
+.card-img img {
+    width: 100%;
+    height: 100%;
+    
+}
+.card-detail{
+    padding: 4px;
+    padding-right: 55px;
+}
+.card-detail h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.card-detail p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+.about-level-inner {
+    padding-top: 18px;
+    padding-bottom: 100px;
+}
+/* ================================ demo card==== */
+.demo-card-inner{
+    background:var(--bgc-main) ;
+    padding: 12px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+.card-row-wrapper {
+    color: #fff;
+    padding: 42px 41px;
+}
+.card-row-wrapper .row {
+    align-items: center;
+}
+.demo-card-text h4 {
+    font-size: 34px;
+    margin-bottom: 12px;
+    color: white;
+    font-family: var(--heading-font);
+    font-weight: bold;
+}
+.demo-card-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 300;
+    color: white;
+}
+
+/* ====================benefit card============= */
+.benefit-card-cover{
+    padding-block: 12px;
+}
+.benefit-card-wrapper{
+    color: white;
+    padding: 102px 0 85px;
+    background-color: #0f1439;
+}
+
+.benefit-tag span{
+        color: white;
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 16px;
+        min-width: 70px;
+        background:var(--bgc-sec);
+        min-height: 16px;
+        text-align: center;
+        font-family: Merriweather Sans, sans-serif;
+        font-weight: bold;
+        border-radius: 4px;
+        margin-bottom: 26px;
+        text-transform: uppercase;
+}
+.benefit-heading h4{
+    margin-block:41px;
+}
+.benefit-heading h4 span{
+    font-size: 41px;
+    color: white;
+    font-weight: bold;
+    font-family: var(--heading-font);
+    line-height: 1.167;
+    letter-spacing: -1px;
+}
+.benefit-detail{
+    padding: 12px;
+}
+.benefit-detail-img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 17px;
+}
+.benefit-detail-img img{
+    width: 100%;
+    height: 100%;
+}
+.benefit-detail-heading{
+    padding-left: 21px;
+    position: relative; 
+    margin-bottom: -10px;
+}
+.benefit-detail-heading::before {
+    top: 3px;
+    left: 0;
+    width: 3px;
+    bottom: -4px;
+    height: auto;
+    content: "";
+    position: absolute;
+    background: #3AD8B6;
+}
+.benefit-detail-heading h5 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.334;
+    letter-spacing: -0.6px;
+}
+.benefit-detail-text p {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    margin-block: 21px;
+    padding-left: 21px;
+}
+
+
+
+/* ==================== Media queries============= */
+@media (max-width: 575.98px) { 
+    
+ }
+
+
+@media (max-width: 767.98px) { 
+    
+ }
+
+
+@media (max-width: 991.98px) { 
+    
+ }
+
+
+@media (max-width: 1199.98px) { 
+    
+ }
+
+
+@media (max-width: 1399.98px) { 
+    
+ }
