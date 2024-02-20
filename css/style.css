@@ -621,7 +621,7 @@ ul.navbar-nav>li:not(:has(i)):hover a::before {
 
 /* ==================integration================= */
 #integration{
-    padding: 12px;
+    padding: 12px 0;
 }
 .integration-wrapper{
     padding: 132px 0 134px;
@@ -963,6 +963,90 @@ ul.navbar-nav>li:not(:has(i)):hover a::before {
     background:var(--bgc-main);
     padding-top: 90px;
     min-height: 355px;
+}
+.overview-banner-inner > span {
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    min-width: 70px;
+    background: linear-gradient(90deg, #4056F3 0%, #202D87 100%);
+    min-height: 16px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+.overview-banner-inner h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    padding-right: 470px;
+    color: white;
+    font-family: "Merriweather", serif;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+/* ========tabs=============== */
+
+.overview-head h3 {
+    font-family: Merriweather, serif;
+    font-weight: bold;
+    line-height: 1.167;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+.overview-tab-list .nav-tabs {
+    border: none;
+}
+.overview-tab-list button.nav-link {
+    border: none;
+    font-size: 18px;
+    padding: 0;
+    margin-right: 48px;
+    color: #0f14398a;
+    border-bottom: 5px solid;
+    border-color: transparent;
+    padding-bottom: 5px;
+}
+.overview-tab-list button.nav-link:hover{
+    border-color: transparent;
+}
+.overview-tab-list button.nav-link.active {
+    stroke: black;
+    -webkit-text-stroke-width: 1px;
+    border-color: var(--primary-color);
+}
+.nav-tablist-wrapper {
+    padding-top: 18px;
+    padding-bottom: 100px;
+}
+.nav-tablist-inner {
+    padding: 55px 0 0;
+}
+.nav-tablist-img {
+    padding: 4px;
+}
+.nav-tablist-text {
+    padding: 4px;
+}
+.nav-tablist-text h6 {
+    font-size: 1.25rem;
+    font-family: Merriweather Sans, sans-serif;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: -0.5px;
+    margin-bottom: 7px;
+}
+.nav-tablist-text p span {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.45px;
+    margin-bottom: 15px;
 }
 
 
