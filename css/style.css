@@ -718,7 +718,7 @@ ul.navbar-nav>li:not(:has(i)):hover a::before {
     background-size: cover;
     background-position: center;
     top: 0;
-    right: -151px;
+    right: -116px;
     width: 473px;
     min-height: 400px;
     pointer-events: none;
@@ -1434,29 +1434,128 @@ button.accordion-button.collapsed i.fa-solid.fa-plus{
 .accordion-item {
     border: none;
 }
+.accordion-body-wrapper {
+    padding: 29px 0 30px;
+}
+.accordion-body-list h6 {
+    font-weight: 500;
+    line-height: 1.57;
+    letter-spacing: -0.45px;
+    margin-bottom: 11px;
+    font-size: 1.1146rem;
+    min-height: 56px;
+}
+.accordion-body-list ul {
+    margin: 0 0 20px;
+    padding-top: 25px;
+    list-style: none;
+}
+.accordion-body-list ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 6px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.45px;
+    font-size: 1.1765rem;
+}
+.accordion-body-list ul li::after {
+    top: 13px;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    content: "";
+    position: absolute;
+    background: #000;
+    border-radius: 50%;
+}
+.accordion-body-list:has(ul) h6{
+    color: #4056F4;
+}
 
 
 /* ==================== Media queries============= */
-@media (max-width: 575.98px) { 
+@media (max-width: 1399.98px) { 
     
- }
+}
 
-
-@media (max-width: 767.98px) { 
+@media (max-width: 1199.98px) { 
     
- }
+    .head-btn.d-flex {
+        display: none !important;
+    }
+    button.navbar-toggler.collapsed {
+        display: none;
+    }
+    div#navbarSupportedContent {
+        display: none !important;
+    }
+    .banner-wrapper::before{
+        display: none;
+    }
+    .case-study-inner::before{
+        right: 0;
+    }
+    .recruitment-inner>.row{
+        flex-direction: column;
+    }
+    .recruitment-inner>.row>.col-lg-6{
+        width: 100%;
+    }
+    .recruitment-img-inner {
+        margin: 70px 0 0px 0px;
+    }
+    .awards-img-1 {
+        
+        gap: 40px;
+    }
+    .awards-img {
+        margin-bottom: 15px;
+    }
+    .case-study-card-inner {
+        display: block;
+    }
+    .case-study-img {
+        width: 100%;
+    }
+    .case-study-text {
+        width: 100%;
+        padding: 0;
+        padding-top: 30px;
+    }
+   
+}
 
 
 @media (max-width: 991.98px) { 
     
- }
+    .recruitment-image {
+        display: none;
+    }
+    .demo-card-text {
+        margin-bottom: 40px;
+    }
 
+}
 
-@media (max-width: 1199.98px) { 
+@media (max-width: 767.98px) { 
     
- }
+    .banner-text h1 {
+        font-size: 52px;
+    }
+}
 
 
-@media (max-width: 1399.98px) { 
+@media (max-width: 575.98px) { 
     
- }
+}
+
+
+
+
+
+
+
+
+
+
