@@ -966,7 +966,7 @@ ul.navbar-nav>li:not(:has(i)):hover a::before {
     min-height: 355px;
 }
 .overview-banner-wrapper::before{
-    top: 200px;
+    top: 88px;
     right: 0px;
     width: 467px;
     content: "";
@@ -1512,6 +1512,11 @@ button.accordion-button.collapsed i.fa-solid.fa-plus{
 .close {
     text-align: right;
     padding: 0 15px;
+    cursor: pointer;
+}
+.mobile-menu{
+    cursor: pointer;
+    font-size: 20px;
 }
 .mobile-menu-list>ul>li>a {
     margin: 5px 0;
@@ -1542,6 +1547,9 @@ button.accordion-button.collapsed i.fa-solid.fa-plus{
 .menu-list {
     display: none;
     transition: all 0.3s;
+}
+.menu-list.active{
+    display: block;
 }
 
 .menu-list>ul>li>a {
