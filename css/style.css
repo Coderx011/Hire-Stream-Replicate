@@ -718,7 +718,7 @@ ul.navbar-nav>li:not(:has(i)):hover a::before {
     background-size: cover;
     background-position: center;
     top: 0;
-    right: -116px;
+    right: 0px;
     width: 473px;
     min-height: 400px;
     pointer-events: none;
@@ -948,6 +948,7 @@ ul.navbar-nav>li:not(:has(i)):hover a::before {
 }
 .footer-2 ul{
     display: flex;
+    flex-wrap: wrap;
 }
 .footer-2 ul li:not(:nth-last-child(1)) {
     padding-right: 10px;
@@ -963,6 +964,19 @@ ul.navbar-nav>li:not(:has(i)):hover a::before {
     background:var(--bgc-main);
     padding: 90px 0;
     min-height: 355px;
+}
+.overview-banner-wrapper::before{
+    top: 200px;
+    right: 0px;
+    width: 467px;
+    content: "";
+    z-index: 1;
+    position: absolute;
+    min-height: 312px;
+    pointer-events: none;
+    background-size: cover;
+    background-image: url(../Assests/download-overview.svg);
+    background-repeat: no-repeat;
 }
 .overview-banner-inner .head-btn {
     margin-left: 0;
@@ -1472,19 +1486,113 @@ button.accordion-button.collapsed i.fa-solid.fa-plus{
 .accordion-body-list:has(ul) h6{
     color: #4056F4;
 }
+/* =================================Mobile menu=========================== */
+.mobile-menu{
+    display: none;
+}
+
+.mobile-menu-list ul {
+    list-style: none;
+}
+.mobile-menu-list ul a{
+    color: inherit;
+    text-decoration: none;
+}
+.mobile-menu-list {
+    position: absolute;
+    top: 0;
+    left: -30%;
+    background: white;
+    height: 100vh;
+    width: 30%;
+    padding: 20px 10px;
+    z-index: 11;
+    transition: all 0.5s;
+}
+.close {
+    text-align: right;
+    padding: 0 15px;
+}
+.mobile-menu-list>ul>li>a {
+    margin: 5px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    justify-content: flex-start;
+    text-decoration: none;
+    justify-content: space-between;
+    border-bottom: 1px solid #e3e3e3;
+}
+.mobile-menu-list>ul>li>a i{
+    transform: rotate(0deg);
+    transition: all 0.3s;
+}
+.mobile-menu-list>ul>li>a:hover i,
+.mobile-menu-list>ul>li>a:focus-within i{
+    transform: rotate(180deg);
+}
+
+.menu-list {
+    display: none;
+    transition: all 0.3s;
+}
+
+.menu-list>ul>li>a {
+    opacity: 0.6;
+    font-size: 14px;
+    padding-left: 41px !important;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    text-align: left;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+.mobile-wrapper.show{
+    display: block;
+}
 
 
+.menu-shadow {
+    display: none;
+    position: absolute;
+    background: #1c1c1c78;
+    inset: 0;
+    z-index: 2;
+}
+.menu-shadow.show{
+    display: block;
+}
 /* ==================== Media queries============= */
 @media (max-width: 1399.98px) { 
+    .recruitment-img-inner {
+        margin: 76px -60px 0px 0px;
+        box-shadow: 1px 1px 11px 4px #ccc;
+        position: relative;
+    }
     
 }
 
-@media (max-width: 1199.98px) { 
+@media (max-width: 1180.98px) { 
     
-    .head-btn.d-flex {
+    .main .head-btn.d-flex {
         display: none !important;
     }
-    button.navbar-toggler.collapsed {
+    button.navbar-toggler {
         display: none;
     }
     div#navbarSupportedContent {
@@ -1523,6 +1631,18 @@ button.accordion-button.collapsed i.fa-solid.fa-plus{
         padding: 0;
         padding-top: 30px;
     }
+    .pricing-card-wrapper::before{
+        display: none;
+    }
+    .pricing-start-card {
+        margin-bottom: 30px;
+    }
+    .pricing-button span {
+        margin-inline: 10px;
+    }
+    .mobile-menu{
+        display: block;
+    }
    
 }
 
@@ -1535,6 +1655,21 @@ button.accordion-button.collapsed i.fa-solid.fa-plus{
     .demo-card-text {
         margin-bottom: 40px;
     }
+    .foot-social-icon, .footer-product, .footer-about, .footer-solution, .footer-email, .footer-2 {
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+    .overview-banner-inner h2 {
+        font-size: 48px;
+        padding-right: 0px;
+    }
+    .overview-banner-wrapper::before{
+        display: none;
+    }
+    .overview-tab-list .nav-tabs {
+        gap: 20px;
+    }
+
 
 }
 
@@ -1543,10 +1678,35 @@ button.accordion-button.collapsed i.fa-solid.fa-plus{
     .banner-text h1 {
         font-size: 52px;
     }
+    .recruitment-detail h3 {
+        font-size: 35px;
+    }
+    .demo-card-text h4 {
+        font-size: 28px;
+    }
+    .benefit-heading h4 span {
+        font-size: 30px;
+    }
+    .main {
+        padding: 0px 4px 0 0px;
+        
+    }
+    .resoning-text h3 {
+        font-size: 2rem;
+    }
+    .resoning-text {
+        margin-bottom: 30px;
+    }
+
+    
 }
 
 
-@media (max-width: 575.98px) { 
+@media (max-width: 577.98px) { 
+    .nav-tablist-img {
+        width: 51px;
+        height: 51px;
+    }
     
 }
 
