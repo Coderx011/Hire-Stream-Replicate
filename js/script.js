@@ -11,7 +11,7 @@ if(mobile_menu){
 }
 if(mobile_menu_close){
     mobile_menu_close.addEventListener( "click" , () =>{
-        document.querySelector('.mobile-menu-list').style.left = '-30%'
+        document.querySelector('.mobile-menu-list').style.left = '-89%'
         document.querySelector('.menu-shadow').style.display = 'none'
         document.querySelector('body').style.overflow = 'auto'
     });
